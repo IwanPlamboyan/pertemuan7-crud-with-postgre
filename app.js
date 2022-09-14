@@ -4,11 +4,11 @@ import cookieParser from 'cookie-parser'; // mengimport module cookie-parser
 import session from 'express-session'; // mengimport module session
 import flash from 'connect-flash'; // mengimport module flash
 import ContactRoute from './routes/ContactRoute.js'; // mengimport route contact
-import morgan from 'morgan'; // mengimport route contact
+import morgan from 'morgan'; // mengimport morgan
 
 const app = express();
 
-app.use(morgan('dev'));
+app.use(morgan('dev')); //menggunakan morgan untuk mencatat request log yang masuk
 app.set('view engine', 'ejs'); // information using ejs
 app.use(expressLayouts); // information using express-ejs-layouts
 app.use(express.urlencoded({ extended: false })); // menggunakan middleware untuk mendapatkan data req.body
